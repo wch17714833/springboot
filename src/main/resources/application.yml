@@ -3,3 +3,6 @@ spring:
     view:
       prefix: /templates/
       suffix: .ftl
+  thymeleaf:
+    prefix: /templates/
+    suffix: .ftl

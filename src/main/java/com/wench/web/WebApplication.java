@@ -14,21 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @EnableCasClient//启用cas client
 public class WebApplication extends SpringBootServletInitializer {
     private Logger logger = LoggerFactory.getLogger(WebApplication.class);
-    @RequestMapping("/index")
-    public String index(ModelMap map) {
-        System.out.println("111111111111111111111111WWW");
-
-        map.addAttribute("name", "clien B");
-        return "index";
-    }
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        logger.info("启动成功------------------开始------------------------");
         return application.sources(WebApplication.class);
     }
 
     public static void main(String[] args) {
-        System.out.println("222");
-
         SpringApplication.run(WebApplication.class, args);
     }
 
